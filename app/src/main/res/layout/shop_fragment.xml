@@ -6,58 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".ShopActivity"
+    tools:context=".ShopFragment"
     tools:openDrawer="start">
 
-    <RelativeLayout
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/shop_lists"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <!--<include-->
-            <!--android:id="@+id/toolbar_container"-->
-            <!--layout="@layout/customize_toolbar" />-->
-
-        <!--<FrameLayout-->
-            <!--android:id="@+id/container"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:background="@android:color/holo_blue_light"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_below="@+id/toolbar_container" />-->
-        <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp">
-
-            <TextView
-                android:id="@+id/message_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:layout_marginTop="10dp"/>
-
-            <Button
-                android:id="@+id/message_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"/>
-        </LinearLayout>
-
-    </RelativeLayout>
-
-    <include
-        layout="@layout/app_bar_main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <android.support.design.widget.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
-
+        android:scrollbars="horizontal" />
 </android.support.v4.widget.DrawerLayout>
