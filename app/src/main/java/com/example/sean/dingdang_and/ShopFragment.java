@@ -40,7 +40,8 @@ public class ShopFragment extends Fragment{
         shopLists = DataSupport.where("type = ?", "shoplist").find(Message.class);
         if(shopLists == null || shopLists.size() == 0){
             for(int i = 0; i < 20;i++){
-                Message message = new Message("一箱苹果", (long)1528968178, "shoplist");
+                Message message = new Message("一箱苹果" + i * i * i, (long)1528968178, "shoplist");
+                message.setId(i);
                 shopLists.add(message);
             }
         }
