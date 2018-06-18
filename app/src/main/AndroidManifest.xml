@@ -5,7 +5,7 @@
     <application
         android:name="org.litepal.LitePalApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_nav_icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -22,10 +22,10 @@
         </activity>
         <activity android:name=".ShopFragment" />
 
-        <service
-            android:name=".MessageService"
-            android:enabled="true"
-            android:exported="true"></service>
+        <service android:name=".MessageService" ></service>
+        <receiver android:name=".AlarmReceiver"></receiver>
+        <service android:name=".myAlarmClockService"></service>
+        <receiver android:name=".AlarmClockReceiver"></receiver>
     </application>
 
 </manifest>

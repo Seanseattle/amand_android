@@ -1,10 +1,6 @@
 package com.example.sean.dingdang_and;
 
-import android.provider.ContactsContract;
-
 import org.litepal.crud.DataSupport;
-
-import java.sql.Time;
 
 public class Message extends DataSupport{
     private String message;
